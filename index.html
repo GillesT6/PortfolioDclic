@@ -120,8 +120,8 @@
         <section id="contact">
             <h2>Me joindre</h2>
   <p>N'hésitez pas à me laisser un message ou me suivre sur les réseaux !</p>
-
-  <form action="https://formspree.io/f/mqabldnn" method="POST">
+            
+  <form id="formulaireContact" action="https://formspree.io/f/mqabldnn" method="POST">
     <label for="nom">Nom :</label>
     <input type="text" id="nom" name="nom" required>
 
@@ -147,6 +147,15 @@
     </main>
     
 <button id="backToTop">↑</button>
+    <script>
+  const form = document.getElementById("formulaireContact");
+
+  form.addEventListener("submit", function (event) {
+    setTimeout(() => {
+      form.reset();
+    }, 100);
+  });
+</script>
     <script src="index.js"></script>
 </body>
 </html>
